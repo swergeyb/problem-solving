@@ -28,3 +28,10 @@ LISTEN 0      128          0.0.0.0:22        0.0.0.0:*
 
 
 5. При помощи HEREDOC записать в файл многострочное сообщение
+```bash
+[user@vm]$ cat << EOF >> output.txt
+> The first line followed by ...
+> the second line which in turn followed by...
+> the third line.The end
+> EOF
+```
