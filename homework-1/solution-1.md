@@ -21,12 +21,12 @@ LISTEN 0      128          0.0.0.0:22        0.0.0.0:*
 [user@vm]$ cat npipe > archive.tar
 [1]+  Done                    tar -cf npipe output.txt
 ```
-
 4. Вывести дату в unixtime
 На вход команды date через пайп подать свой формат выводимой даты
-
-
-
+``` bash
+[user@vm]$ echo "2024-12-31 23:59:59" |date +"%j %W %w %A %B %H %M" -f -
+366 53 2 Tuesday December 23 59
+```
 5. При помощи HEREDOC записать в файл многострочное сообщение
 ```bash
 [user@vm]$ cat << EOF >> output.txt
