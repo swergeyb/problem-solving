@@ -4,13 +4,13 @@
 93.XXX.74.XX/24
 
 ```
-2. Создать именованный пайп ( named pipe ). Вывести в файл через созданный pipe вывод команды ss -plnt
-terminal 1:
+2. Создать именованный пайп ( named pipe ). Вывести в файл через созданный pipe вывод команды ss -plnt \
+  *terminal 1:*
 ```bash
 [user@vm]$ mkfifo npipe
 [user@vm]$ ss -plnt > npipe
 ```
-terminal 2:
+  *terminal 2:*
 ```bash
 [user@vm]$ cat npipe > output.txt
 [user@vm]$ cat output.txt
